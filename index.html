@@ -47,7 +47,7 @@ function sanaChk() {
 
     if (/^[\s\u3000]?見返した日記には、一ページだけ意味のわからない箇所がある。/.test(content[0])) result += "<li> 本文の書き出しは正しいです。</li>\n";
     else result += "<li style=\"color:#FF0000;\"> 本文の書き出しが正しくありません。</li>\n";
-    if (textcount[1] <= 10000) result += "<li> 本文は10000文字以下です。</li>\n";
+    if (letternum <= 10000) result += "<li> 本文は10000文字以下です。</li>\n";
     else result += "<li style=\"color:#FF0000;\"> 本文が10000文字を超えています。</li>\n";
     if (tag.indexOf("さなコン2024_N") >= 0){
 	if (tag.indexOf("さなコン2024_フリー") < 0 ) result += "<li> 正しくタグが設定されています。</li>\n";
