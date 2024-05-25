@@ -43,7 +43,8 @@ function sanaChk() {
 	return value;});
 
     var result = "";
-    
+    var letternum = (textcount.length > 1)? textcount[1]:textcount[0];
+
     if (/^[\s\u3000]?見返した日記には、一ページだけ意味のわからない箇所がある。/.test(content[0])) result += "<li> 本文の書き出しは正しいです。</li>\n";
     else result += "<li style=\"color:#FF0000;\"> 本文の書き出しが正しくありません。</li>\n";
     if (textcount[1] <= 10000) result += "<li> 本文は10000文字以下です。</li>\n";
@@ -70,7 +71,7 @@ function sanaChk() {
   <p> さなコン2024_N応募作品の形式をチェックするJavaScriptプログラムです。ただし<b>無保証</b>です。このプログラムによるチェック結果を信じて応募し、形式違反で選考を通らなかったとしても作者は責任を負うものではありませんのでご注意下さい。</p>
 <hline>
 <form name="sanachk">
-  <p>該当する作品ページのソースをコピペし,「形式チェック」ボタンをクリックして下さい。
+  <p>該当する作品ページを右クリックして「ソースを表示」を選び、全選択（[CTRL]+[A]で可能）の後コピー（[CTRL]+[C]）してからこのページの下のフォームをクリックしペースト（[CTRL]+[V]）して「形式チェック」ボタンをクリックして下さい。
  </p>
 <textarea name="source" rows="4" cols="60">
 </textarea><br>
